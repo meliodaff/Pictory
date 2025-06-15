@@ -28,7 +28,18 @@ function App() {
                   <>
                     <img className="image-preview" src={imagePreview} />
                     <div className="story-container">
-                      {loading ? <Loading /> : response}
+                      {!loading ? (
+                        <div className="loading-container">
+                          <Loading />
+                          <p>
+                            If the waiting time is too long, kindly contact the
+                            author. The server might be inactive as i am only
+                            hosted in a free server
+                          </p>
+                        </div>
+                      ) : (
+                        response
+                      )}
                     </div>
                   </>
                 )}
