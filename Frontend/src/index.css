@@ -9,6 +9,7 @@
 }
 body {
   margin-top: 4em;
+  width: 100%;
 }
 
 header {
@@ -236,8 +237,11 @@ input[type="file"] {
   .second-section-container {
     width: 100%;
   }
+}
 
-  .even-columns {
+@media (max-width: 250px) {
+  main {
+    width: 250px;
   }
 }
 
@@ -247,7 +251,7 @@ input[type="file"] {
   border: 5px solid #f3f3f3;
   border-top: 5px solid #3498db;
   border-radius: 50%;
-  animation: spin 1s linear infinite;
+  animation: spi n 1s linear infinite;
   margin: 50px auto; /* center it */
 }
 
