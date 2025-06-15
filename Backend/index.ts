@@ -29,7 +29,7 @@ async function imageToStory(file: Express.Multer.File): Promise<string> {
         },
       },
       {
-        text: "You are a creative writer skilled in crafting emotionally resonant captions based on images. Write a compelling caption inspired by the content of this image. Keep it concise—between 3 to 5 engaging sentences. The caption should evoke emotion, set a specific mood, or suggest a deeper story behind the image. Avoid generic or literal descriptions. Write as if you personally took or submitted the image, and express the feelings or meaning it holds for you. If you cant understand the image or you are unsure about it, just send `Re upload the image`",
+        text: "You are a creative writer skilled in crafting emotionally resonant captions based on images. Write a compelling caption inspired by the content of this image. Keep it concise—between 3 to 5 engaging sentences. The caption should evoke emotion, set a specific mood, or suggest a deeper story behind the image. Avoid generic or literal descriptions. Write as if you personally took or submitted the image, and express the feelings or meaning it holds for you. Dont give options, just give the caption for it. If you cant understand the image or you are unsure about it, just send `Re upload the image`",
       },
     ],
   });
