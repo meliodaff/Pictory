@@ -246,7 +246,7 @@ input[type="file"] {
   border: 5px solid #f3f3f3;
   border-top: 5px solid #3498db;
   border-radius: 50%;
-  animation: spi n 1s linear infinite;
+  animation: spin 1s linear infinite;
   margin: 50px auto; /* center it */
 }
 
