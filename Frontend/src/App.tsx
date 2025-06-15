@@ -28,7 +28,7 @@ function App() {
                   <>
                     <img className="image-preview" src={imagePreview} />
                     <div className="story-container">
-                      {!loading ? (
+                      {loading ? (
                         <div className="loading-container">
                           <Loading />
                           <p>
