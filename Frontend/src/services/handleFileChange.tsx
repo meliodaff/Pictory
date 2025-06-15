@@ -29,11 +29,15 @@ const useHandleFileChange = (setPreview: (url: string) => void) => {
 
     setLoading(true);
     try {
-      const response = await axios.post("http://localhost:3000", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+      const response = await axios.post(
+        "https://api-pictory.onrender.com",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
       console.log(response.data);
       setResponse(response.data.message);
     } catch (error) {

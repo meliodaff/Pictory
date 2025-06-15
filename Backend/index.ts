@@ -8,7 +8,9 @@ const app = express();
 dotenv.config();
 
 const port = 3000;
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(
+  cors({ origin: ["http://localhost:5173", "https://pictory-j.netlify.app"] })
+);
 
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
@@ -53,6 +55,10 @@ app.post("/", upload.single("image"), async (req, res) => {
   }
 
   //   res.send(response);
+});
+
+app.get("/", (req, res) => {
+  res.status(200).json("Server for pictory is up");
 });
 
 app.listen(port, (err) => {
