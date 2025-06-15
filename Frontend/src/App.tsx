@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import useHandleFileChange from "./services/handleFileChange";
+import Loading from "./components/Loading";
 
 function App() {
   const [imagePreview, setImagePreview] = useState<string>("");
@@ -16,13 +17,18 @@ function App() {
           <div className="first-section-container">
             <h2>Generate Story!</h2>
             <div className="file-container">
-              <input type="file" accept="image/*" onChange={handleFileChange} />
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleFileChange}
+                placeholder="Place an image"
+              />
               <div className="generated-columns">
                 {imagePreview && (
                   <>
                     <img className="image-preview" src={imagePreview} />
                     <div className="story-container">
-                      {loading ? "Loading..." : response}
+                      {loading ? <Loading /> : response}
                     </div>
                   </>
                 )}
