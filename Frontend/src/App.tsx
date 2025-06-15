@@ -12,7 +12,7 @@ function App() {
     <>
       <Header />
       <main>
-        <section className="first-section">
+        <section className="first-section" id="first-section">
           <div className="first-section-container">
             <h2>Generate Story!</h2>
             <div className="file-container">
@@ -27,6 +27,51 @@ function App() {
                   </>
                 )}
               </div>
+            </div>
+          </div>
+        </section>
+        <section className="second-section" id="second-section">
+          <div className="second-section-container">
+            <div className="even-columns">
+              <div>
+                <h2>Make a caption for it!</h2>
+              </div>
+              <div>
+                <p>
+                  Pictory is a creative web tool that transforms your images
+                  into vivid, emotionally-driven short stories. Just upload any
+                  picture, and watch as it generates a unique 3–5 sentence
+                  narrative inspired by the visual details, mood, and context of
+                  the image. Whether you're looking to enhance your content,
+                  spark inspiration, or simply have fun, Pictory brings your
+                  visuals to life with meaningful storytelling powered by AI.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="third-section" id="third-section">
+          <div className="third-section-container">
+            <h1>Jv Bialen</h1>
+            <img src="me.jpg" className="author-photo" />
+            <div className="socials-container">
+              <a
+                href="https://www.linkedin.com/in/jv-bialen-905b8a32b/"
+                target="blank"
+              >
+                <img
+                  src="linkedin.png"
+                  alt="linkedin logo"
+                  className="linkedin-logo"
+                />
+              </a>
+              <a href="https://github.com/meliodaff" target="blank">
+                <img
+                  src="github.png"
+                  alt="github logo"
+                  className="github-logo"
+                />
+              </a>
             </div>
           </div>
         </section>

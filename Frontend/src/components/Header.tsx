@@ -6,9 +6,9 @@ const Header = () => {
           <div className="header-columns">
             <h1 className="header-left-section">Pictory</h1>
             <nav className="header-right-section">
-              <a href="#">Home</a>
-              <a href="#">About</a>
-              <a href="#">Author</a>
+              <a href="#first-section">Home</a>
+              <a href="#second-section">About</a>
+              <a href="#third-section">Author</a>
             </nav>
           </div>
         </div>

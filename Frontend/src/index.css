@@ -5,12 +5,19 @@
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  margin-top: 4em;
 }
 
 header {
   background-color: #819a91;
   padding: 8px 0;
   color: #eeefe0;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 .header-container {
@@ -27,6 +34,7 @@ header {
 .header-right-section {
   display: flex;
   justify-content: space-evenly;
+  padding: 0 20px;
   align-items: center;
 }
 
@@ -52,6 +60,17 @@ nav a:active {
 .first-section {
   line-height: 40px;
   padding-top: 20px;
+  min-height: 645px;
+}
+
+#first-section {
+  scroll-margin-top: 80px; /* Adjust to match your header height */
+}
+#second-section {
+  scroll-margin-top: 190px;
+}
+#third-section {
+  scroll-margin-top: 59px;
 }
 
 .first-section-container {
@@ -71,7 +90,7 @@ input[type="file"] {
 .image-preview {
   object-fit: contain;
   width: 500px;
-  height: 500px;
+  height: 400px;
   margin-left: -50px;
 }
 
@@ -99,6 +118,11 @@ input[type="file"] {
   .story-container {
     padding: 0 15px;
   }
+
+  .first-section {
+    padding-top: 50px;
+    min-height: 700px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -107,5 +131,112 @@ input[type="file"] {
   }
   .image-preview {
     margin: 0 auto;
+  }
+
+  .second-section-container {
+    width: 100%;
+  }
+}
+
+/* ^^ FIRST - SECTION ^^ */
+/* ||                 || */
+
+.second-section {
+  background: #a7c1a8;
+  width: 100%;
+}
+
+.second-section-container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.even-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  color: #eeefe0;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+.even-columns h2 {
+  font-size: 2.5em;
+}
+
+.even-columns p {
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+  .even-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .even-columns h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+  }
+
+  .even-columns p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .second-section-container {
+    width: 90%;
+  }
+}
+
+/* ^^ SECOND - SECTION ^^ */
+/* ||                  ||*/
+
+.third-section-container {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 50px;
+  line-height: 90px;
+  color: #819a91;
+}
+
+.third-section-container h1 {
+  font-size: 3em;
+}
+
+.author-photo {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.socials-container img {
+  width: 50px;
+  height: 50px;
+}
+
+.socials-container {
+}
+
+.linkedin-logo {
+  margin-right: 40px;
+}
+
+@media (max-width: 600px) {
+  .author-photo {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 601px) or (max-width: 1024px) {
+  .second-section-container {
+    width: 100%;
+  }
+
+  .even-columns {
   }
 }
