@@ -7,6 +7,7 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
 }
+
 body {
   margin-top: 4em;
   width: 100%;
@@ -182,12 +183,6 @@ input[type="file"] {
 
   .even-columns p {
     text-align: center;
-  }
-}
-
-@media (max-width: 1024px) {
-  .second-section-container {
-    width: 90%;
   }
 }
 
