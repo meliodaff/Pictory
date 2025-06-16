@@ -31,7 +31,7 @@ const useHandleFileChange = (
     formData.append("image", file);
 
     setLoading(true);
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setShowLoadingMessage(true);
     }, 5000);
     try {
@@ -50,7 +50,9 @@ const useHandleFileChange = (
       setResponse("Server error, Contact the author to fix it");
       console.log(error);
     }
+    console.log(timer);
     setLoading(false);
+    clearTimeout(timer);
     setShowLoadingMessage(false);
 
     console.log("Selected file:", file.name);
