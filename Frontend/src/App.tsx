@@ -68,10 +68,8 @@ function App() {
                   something you'd post yourself. Whether you're sharing a funny
                   moment, a chill selfie, or something totally random, Pictory
                   helps you find the perfect words — lighthearted, a little
-                  sarcastic, and always relatable. No overthinking, no robotic
-                  text — just captions with personality. It's like having a
-                  caption-savvy friend in your pocket (minus the typing
-                  anxiety).
+                  sarcastic, and always relatable. It's like having a
+                  caption-savvy friend in your pocket.
                 </p>
               </div>
             </div>
