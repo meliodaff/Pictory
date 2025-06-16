@@ -5,9 +5,21 @@ import Loading from "./components/Loading";
 
 function App() {
   const [imagePreview, setImagePreview] = useState<string>("");
-  const { handleFileChange, response, loading } =
-    useHandleFileChange(setImagePreview);
+  const [showLoadingMessage, setShowLoadingMessage] = useState<boolean>(false);
+  const { handleFileChange, response, loading } = useHandleFileChange(
+    setImagePreview,
+    setShowLoadingMessage
+  );
   // this function validates the user input, only images are allowed
+
+  const loadingMessage = () => {
+    return (
+      <p>
+        If the waiting time is too long, kindly contact the author. The server
+        might be inactive as i am only hosted in a free server
+      </p>
+    );
+  };
 
   return (
     <>
@@ -31,11 +43,7 @@ function App() {
                       {loading ? (
                         <div className="loading-container">
                           <Loading />
-                          <p>
-                            If the waiting time is too long, kindly contact the
-                            author. The server might be inactive as i am only
-                            hosted in a free server
-                          </p>
+                          {showLoadingMessage && loadingMessage()}
                         </div>
                       ) : (
                         response

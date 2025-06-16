@@ -1,7 +1,10 @@
 import axios from "axios";
 import { useState } from "react";
 
-const useHandleFileChange = (setPreview: (url: string) => void) => {
+const useHandleFileChange = (
+  setPreview: (url: string) => void,
+  setShowLoadingMessage: React.Dispatch<React.SetStateAction<boolean>>
+) => {
   const [response, setResponse] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -28,6 +31,9 @@ const useHandleFileChange = (setPreview: (url: string) => void) => {
     formData.append("image", file);
 
     setLoading(true);
+    setTimeout(() => {
+      setShowLoadingMessage(true);
+    }, 5000);
     try {
       const response = await axios.post(
         "https://api-pictory.onrender.com",
@@ -45,6 +51,8 @@ const useHandleFileChange = (setPreview: (url: string) => void) => {
       console.log(error);
     }
     setLoading(false);
+    setShowLoadingMessage(false);
+
     console.log("Selected file:", file.name);
   };
 
