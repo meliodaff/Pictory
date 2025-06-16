@@ -125,6 +125,9 @@ input[type="file"] {
 }
 
 @media (max-width: 600px) or (max-width: 820px) {
+  .file-container {
+    margin: 0 20px;
+  }
   .generated-columns {
     grid-template-columns: 1fr;
   }
@@ -142,14 +145,22 @@ input[type="file"] {
     padding-top: 50px;
     min-height: 700px;
   }
+
+  .story-container {
+    padding: 0;
+  }
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 500px) and (max-width: 1024px) {
   .generated-columns {
     grid-template-columns: 1fr;
   }
   .image-preview {
     margin: 0 auto;
+  }
+
+  .story-container {
+    padding: 0 50px;
   }
 
   .second-section-container {
@@ -194,7 +205,6 @@ input[type="file"] {
   }
 
   .even-columns h2 {
-    margin-bottom: 20px;
     font-size: 2em;
   }
 
@@ -246,9 +256,25 @@ input[type="file"] {
   }
 }
 
-@media (max-width: 601px) or (max-width: 1024px) {
+@media (min-width: 600px) and (max-width: 1200px) {
+  .even-columns p {
+    padding: 0 70px;
+  }
+}
+
+@media (max-width: 601px) or (max-width: 1200px) {
+  .generated-columns {
+    grid-template-columns: 1fr;
+  }
+  .image-preview {
+    margin: 0 auto;
+  }
   .second-section-container {
     width: 100%;
+  }
+  .even-columns {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
   }
 }
 
