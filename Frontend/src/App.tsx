@@ -63,13 +63,15 @@ function App() {
               </div>
               <div>
                 <p>
-                  Pictory is a creative web tool that transforms your images
-                  into vivid, emotionally-driven short stories. Just upload any
-                  picture, and watch as it generates a unique 3–5 sentence
-                  narrative inspired by the visual details, mood, and context of
-                  the image. Whether you're looking to enhance your content,
-                  spark inspiration, or simply have fun, Pictory brings your
-                  visuals to life with meaningful storytelling powered by AI.
+                  Pictory is a fun and user-friendly web app that turns your
+                  images into witty, casual captions that sound just like
+                  something you'd post yourself. Whether you're sharing a funny
+                  moment, a chill selfie, or something totally random, Pictory
+                  helps you find the perfect words — lighthearted, a little
+                  sarcastic, and always relatable. No overthinking, no robotic
+                  text — just captions with personality. It's like having a
+                  caption-savvy friend in your pocket (minus the typing
+                  anxiety).
                 </p>
               </div>
             </div>
