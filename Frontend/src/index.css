@@ -105,9 +105,10 @@ input[type="file"] {
 
 .image-preview {
   object-fit: contain;
+  width: 500px;
   height: 400px;
   margin-left: -50px;
-  box-shadow: 0px 0px 40px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
 }
 
@@ -123,12 +124,6 @@ input[type="file"] {
   margin-top: 30px;
 }
 
-@media (max-width: 350px) {
-  .image-preview {
-    width: 100%;
-  }
-}
-
 @media (max-width: 600px) or (max-width: 820px) {
   .file-container {
     margin: 0 20px;
@@ -137,6 +132,7 @@ input[type="file"] {
     grid-template-columns: 1fr;
   }
   .image-preview {
+    width: 100%;
     margin: 0 auto;
     height: 300px;
     margin-bottom: 20px;
