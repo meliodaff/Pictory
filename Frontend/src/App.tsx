@@ -2,15 +2,18 @@ import { useState } from "react";
 import Header from "./components/Header";
 import useHandleFileChange from "./services/handleFileChange";
 import Loading from "./components/Loading";
+import useHandleCopyMessage from "./services/handleCopyMessage";
 
 function App() {
   const [imagePreview, setImagePreview] = useState<string>("");
   const [showLoadingMessage, setShowLoadingMessage] = useState<boolean>(false);
-  const { handleFileChange, response, loading } = useHandleFileChange(
-    setImagePreview,
-    setShowLoadingMessage
-  );
+
   // this function validates the user input, only images are allowed
+  const { handleFileChange, response, loading, openFileDialog, fileRef } =
+    useHandleFileChange(setImagePreview, setShowLoadingMessage);
+
+  const { response: responseForHandleCopyMessage, handleCopyMessage } =
+    useHandleCopyMessage();
 
   const loadingMessage = () => {
     return (
@@ -29,12 +32,19 @@ function App() {
           <div className="first-section-container">
             <h2>Generate Story!</h2>
             <div className="file-container">
+              {/* <FileUploader setImagePreview={setImagePreview} />
+               */}
               <input
                 type="file"
                 accept="image/*"
+                ref={fileRef}
                 onChange={handleFileChange}
-                placeholder="Place an image"
+                style={{ display: "none" }}
               />
+
+              <button onClick={openFileDialog} className="upload-image-button">
+                Upload Image
+              </button>
               <div className="generated-columns">
                 {imagePreview && (
                   <>
@@ -46,7 +56,17 @@ function App() {
                           {showLoadingMessage && loadingMessage()}
                         </div>
                       ) : (
-                        response
+                        <>
+                          {response}
+                          <button
+                            onClick={() => {
+                              handleCopyMessage(response);
+                              console.log(responseForHandleCopyMessage);
+                            }}
+                          >
+                            Copy
+                          </button>
+                        </>
                       )}
                     </div>
                   </>

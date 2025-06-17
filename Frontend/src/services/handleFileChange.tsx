@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const useHandleFileChange = (
   setPreview: (url: string) => void,
@@ -7,6 +7,12 @@ const useHandleFileChange = (
 ) => {
   const [response, setResponse] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
+  const fileRef = useRef<HTMLInputElement>(null);
+
+  const openFileDialog = () => {
+    fileRef.current?.click(); // simulate file click
+    console.log(fileRef);
+  };
 
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -59,7 +65,7 @@ const useHandleFileChange = (
     console.log("Selected file:", file.name);
   };
 
-  return { handleFileChange, response, loading };
+  return { handleFileChange, response, loading, openFileDialog, fileRef };
 };
 
 export default useHandleFileChange;
