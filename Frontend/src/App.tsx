@@ -58,14 +58,16 @@ function App() {
                       ) : (
                         <>
                           {response}
-                          <button
-                            onClick={() => {
-                              handleCopyMessage(response);
-                              console.log(responseForHandleCopyMessage);
-                            }}
-                          >
-                            Copy
-                          </button>
+                          {response.trim() !== "Re-upload the image." && (
+                            <button
+                              onClick={() => {
+                                handleCopyMessage(response);
+                                console.log(responseForHandleCopyMessage);
+                              }}
+                            >
+                              Copy
+                            </button>
+                          )}
                         </>
                       )}
                     </div>
