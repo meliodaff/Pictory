@@ -4,7 +4,9 @@ const Header = () => {
       <header>
         <div className="header-container">
           <div className="header-columns">
-            <h1 className="header-left-section">Pictory</h1>
+            <h1 className="header-left-section">
+              <a href="#first-section">Pictory</a>
+            </h1>
             <nav className="header-right-section">
               <a href="#first-section">Home</a>
               <a href="#second-section">About</a>

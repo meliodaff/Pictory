@@ -42,7 +42,11 @@ function App() {
                 style={{ display: "none" }}
               />
 
-              <button onClick={openFileDialog} className="upload-image-button">
+              <button
+                onClick={openFileDialog}
+                className={`upload-image-button ${loading && "isDisabled"}`}
+                disabled={loading}
+              >
                 Upload Image
               </button>
               <div className="generated-columns">
