@@ -63,6 +63,7 @@ function App() {
                               onClick={() => {
                                 handleCopyMessage(response);
                                 console.log(responseForHandleCopyMessage);
+                                alert("Caption saved in the clipboard");
                               }}
                             >
                               Copy
