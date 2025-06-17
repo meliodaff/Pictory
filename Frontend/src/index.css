@@ -149,6 +149,7 @@ button {
   background-color: #a7c1a8;
   color: white;
   cursor: pointer;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.1);
 }
 
 .upload-image-button {
