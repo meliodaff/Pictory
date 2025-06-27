@@ -62,17 +62,19 @@ function App() {
                       ) : (
                         <>
                           {response}
-                          {response.trim() !== "Re-upload the image." || response.trim() !== "Server error, Contact the author to fix it" && (
-                            <button
-                              onClick={() => {
-                                handleCopyMessage(response);
-                                console.log(responseForHandleCopyMessage);
-                                alert("Caption saved in the clipboard");
-                              }}
-                            >
-                              Copy
-                            </button>
-                          )}
+                          {response.trim() !== "Re-upload the image." &&
+                            response.trim() !==
+                              "Server error, Contact the author to fix it" && (
+                              <button
+                                onClick={() => {
+                                  handleCopyMessage(response);
+                                  console.log(responseForHandleCopyMessage);
+                                  alert("Caption saved in the clipboard");
+                                }}
+                              >
+                                Copy
+                              </button>
+                            )}
                         </>
                       )}
                     </div>
