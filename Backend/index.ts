@@ -9,7 +9,13 @@ dotenv.config();
 
 const port = 3000;
 app.use(
-  cors({ origin: ["http://localhost:5173", "https://pictory-j.netlify.app"] })
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://pictory-j.netlify.app",
+      "http://13.213.34.139:3000",
+    ],
+  })
 );
 
 const storage = multer.memoryStorage();
