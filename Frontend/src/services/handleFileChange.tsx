@@ -42,7 +42,7 @@ const useHandleFileChange = (
     }, 5000);
     try {
       const response = await axios.post(
-        "/api/",
+        "/api",
         // "http://13.213.34.139:3000",
         // "https://api-pictory.onrender.com",
         // "http://localhost:3000",
