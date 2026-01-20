@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 
 const useHandleFileChange = (
   setPreview: (url: string) => void,
-  setShowLoadingMessage: React.Dispatch<React.SetStateAction<boolean>>
+  setShowLoadingMessage: React.Dispatch<React.SetStateAction<boolean>>,
 ) => {
   const [response, setResponse] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
@@ -49,7 +49,7 @@ const useHandleFileChange = (
           headers: {
             "Content-Type": "multipart/form-data",
           },
-        }
+        },
       );
       console.log(response.data);
       setResponse(response.data.message);

@@ -15,7 +15,7 @@ app.use(
       "https://pictory-j.netlify.app",
       "http://13.213.34.139:3000",
     ],
-  })
+  }),
 );
 
 const storage = multer.memoryStorage();
@@ -26,7 +26,7 @@ const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 async function imageToStory(file: Express.Multer.File): Promise<string> {
   const base64Image = file.buffer.toString("base64");
   const response = await ai.models.generateContent({
-    model: "gemini-2.0-flash",
+    model: "gemini-3-flash-preview",
     contents: [
       {
         inlineData: {
@@ -51,12 +51,12 @@ app.post("/", upload.single("image"), async (req, res) => {
     return;
   }
 
-  console.log(file);
-
   try {
     const response = await imageToStory(file);
+    console.log(response);
     res.status(200).json({ message: response });
   } catch (error) {
+    console.log(error);
     res.status(500).json({ message: "An error calling api" });
   }
 
